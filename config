@@ -49,7 +49,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -183,8 +183,8 @@ mode "resize" {
 
 ## i3gaps ##
 for_window [class="^.*"] border pixel 3
-gaps inner 15
-gaps outer 15
+gaps inner 9
+gaps outer 9
 
 bindsym $mod+r mode "resize"
 
@@ -194,3 +194,18 @@ bar {
 	position top
         status_command i3blocks
 }
+
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id xcompmgr -c &
+
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #7298c7 #7298c7 #7298c7 #7298c7   #7298c7
+client.focused_inactive #93abcf #93abcf #93abcf #93abcf   #93abcf
+client.unfocused        #93abcf #93abcf #93abcf #93abcf   #93abcf
+client.urgent           #93abcf #93abcf #93abcf #93abcf   #93abcf
+
+client.placeholder      #93abcf #93abcf #93abcf #93abcf   #93abcf
+
+
+client.background       #ffffff
