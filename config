@@ -193,6 +193,11 @@ bindsym $mod+r mode "resize"
 bar {
 	position top
         status_command i3blocks
+	position top
+	output primary
+	tray_output none
+	font pango:DejaVu Sans Mono 10
+	separator_symbol “⁞”
 }
 
 exec --no-startup-id nitrogen --restore
@@ -209,3 +214,4 @@ client.placeholder      #93abcf #93abcf #93abcf #93abcf   #93abcf
 
 
 client.background       #ffffff
+
